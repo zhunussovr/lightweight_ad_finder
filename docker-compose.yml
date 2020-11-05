@@ -10,3 +10,7 @@ services:
     command: --copy-service --loglevel debug
   phonebook:
     build: .
+    depends_on:
+      - "openldap"
+    ports:
+      - "8080:8080"
